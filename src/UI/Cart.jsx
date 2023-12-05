@@ -68,10 +68,25 @@ export default function Cart() {
                 />
               ))}
             </ul>
-            <div className="cart-total-amount">
-              <span>Total amount</span>
-              <p>{currencyFormatter.format(cartTotal)}</p>
-            </div>
+            {loggedUser.userCart.length === 0 && (
+              <p
+                style={{
+                  padding: "0.5rem",
+                  textAlign: "center",
+                  fontSize: "large",
+                  color: "#15103b",
+                  fontWeight: "600",
+                }}
+              >
+                Empty cart
+              </p>
+            )}
+            {loggedUser.userCart.length > 0 && (
+              <div className="cart-total-amount">
+                <span>Total amount</span>
+                <p>{currencyFormatter.format(cartTotal)}</p>
+              </div>
+            )}
 
             <div className="cart-close-modal">
               <Button
