@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/React-shopping-application/static/css/main.69255174.css",
+    "main.js": "/React-shopping-application/static/js/main.59109cad.js",
+    "static/media/women1.jpg": "/React-shopping-application/static/media/women1.9d931799c48af3433ef7.jpg",
+    "static/media/women4.jpg": "/React-shopping-application/static/media/women4.c8ef2080ace960c56d19.jpg",
+    "static/media/Kids2.jpg": "/React-shopping-application/static/media/Kids2.1e152859c2376222f047.jpg",
+    "static/media/women5.jpg": "/React-shopping-application/static/media/women5.214817be28bca63a6789.jpg",
+    "static/media/women3.webp": "/React-shopping-application/static/media/women3.50710a31848c46c50754.webp",
+    "static/media/women2.jpg": "/React-shopping-application/static/media/women2.b56db90c799a8b264763.jpg",
+    "static/media/men1.jpg": "/React-shopping-application/static/media/men1.9a2365244067d9963521.jpg",
+    "static/media/Kids5.webp": "/React-shopping-application/static/media/Kids5.989bc4f8e53027c0dc47.webp",
+    "static/media/men5.webp": "/React-shopping-application/static/media/men5.31e1cc946eab8029b064.webp",
+    "static/media/Kids4.webp": "/React-shopping-application/static/media/Kids4.cffcab2fa212d8dfcaf1.webp",
+    "static/media/WishListLogo.png": "/React-shopping-application/static/media/WishListLogo.fc376321d78ce533a8a5.png",
+    "static/media/Kids3.webp": "/React-shopping-application/static/media/Kids3.eac9eb117ceee4cb990f.webp",
+    "static/media/Kids1.webp": "/React-shopping-application/static/media/Kids1.79cca93713f4f3993903.webp",
+    "static/media/men2.webp": "/React-shopping-application/static/media/men2.1afbed0858ebd810b1c6.webp",
+    "static/media/men4.webp": "/React-shopping-application/static/media/men4.6cb2232e2a0e761b3088.webp",
+    "static/media/WishListNoneLogo.png": "/React-shopping-application/static/media/WishListNoneLogo.956d4b8b0efb31974865.png",
+    "static/media/men3.webp": "/React-shopping-application/static/media/men3.23369a380b2acc6a48b4.webp",
+    "index.html": "/React-shopping-application/index.html",
+    "main.69255174.css.map": "/React-shopping-application/static/css/main.69255174.css.map",
+    "main.59109cad.js.map": "/React-shopping-application/static/js/main.59109cad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69255174.css",
+    "static/js/main.59109cad.js"
+  ]
+}
