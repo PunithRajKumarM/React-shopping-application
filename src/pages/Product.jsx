@@ -47,6 +47,7 @@ export default function Product() {
   function handleWishList(product) {
     console.log("dispatched");
     dispatch(addWishList(product));
+    console.log(product);
   }
 
   return (

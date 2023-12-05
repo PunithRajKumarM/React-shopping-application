@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Button from "../UI/Button";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,12 +32,13 @@ export default function MainNavigation() {
   function handleInputSearchHandler(event) {
     let searchedText = event.target.value;
     dispatch(searchProduct(searchedText));
-
     // let originalData = DUMMY_DATA.filter((data) => {
     //   return data.title.toLowerCase().includes(searchedText);
     // });
     // setSearchedProduct(originalData);
   }
+
+  
 
   return (
     <>

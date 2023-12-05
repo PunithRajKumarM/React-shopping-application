@@ -142,6 +142,10 @@
   width: 100%;
 }
 
+.admin-wishlists-items {
+  padding: 1rem;
+}
+
 .admin-profile-edit {
   cursor: pointer;
   padding: 0.25rem 0.5rem;
@@ -296,7 +300,16 @@
   border-radius: 10px;
 }
 
-.product-image:hover {
+.admin-product-image {
+  cursor: pointer;
+  width: 5rem;
+  aspect-ratio: 1;
+  transition: all 0.25s linear;
+  border-radius: 10px;
+}
+
+.product-image:hover,
+.admin-product-image:hover {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.45);
   transform: scale(1.05);
 }
@@ -606,5 +619,6 @@
   align-items: center;
   color: #15103b;
   font-weight: 700;
+  cursor: pointer;
   font-size: large;
 }

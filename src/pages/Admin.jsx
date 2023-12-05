@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../store/usersSlice";
+import { DUMMY_DATA } from "../dummyData/data";
 
 export default function AdminPage() {
   const [loggedUser, setLoggedUser] = useState(null);
@@ -11,6 +12,9 @@ export default function AdminPage() {
 
   let users = useSelector((state) => state.users);
   const isLogged = users.find((user) => user.isLogin === true);
+  console.log("wishlist", isLogged.userWishlist);
+  console.log("cart", isLogged.userCart);
+  console.log(DUMMY_DATA.flatMap((state) => state));
 
   useEffect(() => {
     if (isLogged) {
@@ -42,8 +46,8 @@ export default function AdminPage() {
             </header>
             <div className="admin-wishlists">
               <h2>My wishlist</h2>
-              <div>
-                {isLogged.userWishlist.length === 0 && (
+              <div className="admin-wishlists-items">
+                {isLogged && isLogged.userWishlist.length === 0 && (
                   <p
                     style={{
                       color: "white",
@@ -54,20 +58,28 @@ export default function AdminPage() {
                     No wishlist items
                   </p>
                 )}
-                {isLogged.userWishlist.length > 0 && (
-                  <div>
-                    {isLogged.userWishlist.map((product) => (
-                      <li key={product.id}>
-                        <p
-                          style={{
-                            color: "white",
-                            textAlign: "center",
-                          }}
-                        >
-                          {product.title}
-                        </p>
-                      </li>
-                    ))}
+                {isLogged && isLogged.userWishlist.length > 0 && (
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      flex: "flexWrap",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {isLogged &&
+                      isLogged.userWishlist.map((product) => (
+                        <li key={product.id}>
+                          <img
+                            className="admin-product-image"
+                            src={product.src}
+                            alt={product.title}
+                            onClick={() => {
+                              navigate(`/categories/${product.id}`);
+                            }}
+                          />
+                        </li>
+                      ))}
                   </div>
                 )}
               </div>
@@ -75,7 +87,7 @@ export default function AdminPage() {
             <div className="admin-cart-items">
               <h2>My cart</h2>
               <div>
-                {isLogged.userCart.length === 0 && (
+                {isLogged && isLogged.userCart.length === 0 && (
                   <p
                     style={{
                       color: "white",
@@ -86,20 +98,29 @@ export default function AdminPage() {
                     No cart items
                   </p>
                 )}
-                {isLogged.userCart.length > 0 && (
-                  <div>
-                    {isLogged.userCart.map((product) => (
-                      <li key={product.id}>
-                        <p
-                          style={{
-                            color: "white",
-                            textAlign: "center",
-                          }}
-                        >
-                          {product.title}
-                        </p>
-                      </li>
-                    ))}
+
+                {isLogged && isLogged.userWishlist.length > 0 && (
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      flex: "flexWrap",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {isLogged &&
+                      isLogged.userCart.map((product) => (
+                        <li key={product.id} style={{ paddingTop: "1rem" }}>
+                          <img
+                            className="admin-product-image"
+                            src={product.src}
+                            alt={product.title}
+                            onClick={() => {
+                              navigate(`/categories/${product.id}`);
+                            }}
+                          />
+                        </li>
+                      ))}
                   </div>
                 )}
               </div>
