@@ -32,23 +32,7 @@ export default function App() {
     },
     { path: "admin", element: <AdminPage /> },
   ]);
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <RootLayout />,
-  //     children: [
-  //       {
-  //         index: true,
-  //         element: <HomePage />,
-  //       },
-  //       { path: "categories", element: <Categories /> },
-  //       { path: "categories/:productId", element: <Product /> },
-  //       { path: "contact", element: <ContactPage /> },
-  //       { path: "signup", element: <SignupPage /> },
-  //     ],
-  //   },
-  //   { path: "admin", element: <AdminPage /> },
-  // ]);
+
   return (
     <>
       <Provider store={store}>
