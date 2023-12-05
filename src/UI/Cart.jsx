@@ -81,6 +81,7 @@ export default function Cart() {
                 Empty cart
               </p>
             )}
+            {/* show cart only if cart length is more than zero */}
             {loggedUser.userCart.length > 0 && (
               <div className="cart-total-amount">
                 <span>Total amount</span>
