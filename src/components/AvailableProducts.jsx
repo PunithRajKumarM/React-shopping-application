@@ -8,14 +8,27 @@ export default function AvailableProducts() {
   let search = useSelector((state) => state.search);
 
   useEffect(() => {
-    let originalData = DUMMY_DATA.map((category) => ({
-      ...category,
-      product: category.product.filter((product) =>
-        product.title.toLowerCase().includes(search.searchedText.toLowerCase())
-      ),
-    }));
-    setFilteredProduct(originalData);
-  }, [search]);
+    // let originalData = DUMMY_DATA.map((category) => ({
+    //   ...category,
+    //   product: category.product.filter((product) =>
+    //     product.title.toLowerCase().includes(search.searchedText.toLowerCase())
+    //   ),
+    // }));
+    let data = [];
+    DUMMY_DATA.map((cat) => {
+      cat &&
+        cat.product &&
+        cat.product.length &&
+        cat.product.map((item) => {
+          if (
+            item.title.toLowerCase().includes(search.searchedText.toLowerCase())
+          ) {
+            data.push(item);
+          }
+        });
+    });
+    setFilteredProduct(data);
+  }, [search.searchedText]);
   console.log(filteredProduct);
 
   return (
@@ -29,15 +42,13 @@ export default function AvailableProducts() {
             </Link>
           ))
         )} */}
-        {filteredProduct.length !== 0 ? (
+        {filteredProduct.length ? (
           <>
-            {filteredProduct.map((item) =>
-              item.product.map((prod) => (
-                <Link to={`/categories/${prod.id}`} key={prod.id}>
-                  <img className="product-image" src={prod.src} alt="" />
-                </Link>
-              ))
-            )}
+            {filteredProduct.map((prod) => (
+              <Link to={`/categories/${prod.id}`} key={prod.id}>
+                <img className="product-image" src={prod.src} alt="" />
+              </Link>
+            ))}
           </>
         ) : (
           <p>No such product</p>
