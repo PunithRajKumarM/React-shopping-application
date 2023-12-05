@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-shopping-application/static/css/main.69255174.css",
-    "main.js": "/React-shopping-application/static/js/main.59109cad.js",
+    "main.css": "/React-shopping-application/static/css/main.9e56fea2.css",
+    "main.js": "/React-shopping-application/static/js/main.6f8a915f.js",
     "static/media/women1.jpg": "/React-shopping-application/static/media/women1.9d931799c48af3433ef7.jpg",
     "static/media/women4.jpg": "/React-shopping-application/static/media/women4.c8ef2080ace960c56d19.jpg",
     "static/media/Kids2.jpg": "/React-shopping-application/static/media/Kids2.1e152859c2376222f047.jpg",
@@ -20,11 +20,11 @@
     "static/media/WishListNoneLogo.png": "/React-shopping-application/static/media/WishListNoneLogo.956d4b8b0efb31974865.png",
     "static/media/men3.webp": "/React-shopping-application/static/media/men3.23369a380b2acc6a48b4.webp",
     "index.html": "/React-shopping-application/index.html",
-    "main.69255174.css.map": "/React-shopping-application/static/css/main.69255174.css.map",
-    "main.59109cad.js.map": "/React-shopping-application/static/js/main.59109cad.js.map"
+    "main.9e56fea2.css.map": "/React-shopping-application/static/css/main.9e56fea2.css.map",
+    "main.6f8a915f.js.map": "/React-shopping-application/static/js/main.6f8a915f.js.map"
   },
   "entrypoints": [
-    "static/css/main.69255174.css",
-    "static/js/main.59109cad.js"
+    "static/css/main.9e56fea2.css",
+    "static/js/main.6f8a915f.js"
   ]
 }
