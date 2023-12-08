@@ -49,6 +49,24 @@ export const DUMMY_DATA = [
         title: "Black shirt",
         price: 599,
       },
+      {
+        id: "m3",
+        src: Men3,
+        title: "Plane T-Shirt",
+        price: 499,
+      },
+      {
+        id: "m4",
+        src: Men4,
+        title: "Hoodie",
+        price: 699,
+      },
+      {
+        id: "m5",
+        src: Men5,
+        title: "Black shirt",
+        price: 599,
+      },
     ],
   },
 
